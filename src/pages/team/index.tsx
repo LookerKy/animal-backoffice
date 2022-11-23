@@ -1,12 +1,12 @@
-import React from "react";
-import { Box, Typography, useTheme } from "@mui/material";
-import Header from "../../components/Header";
-import { tokens } from "../../theme";
-import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
-import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
-import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
-import { DataGrid, GridColDef } from "@mui/x-data-grid";
-import { mockDataTeam } from "../../data/mockData";
+import React from 'react';
+import { Box, Typography, useTheme } from '@mui/material';
+import Header from '../../components/Header';
+import { tokens } from '../../theme';
+import AdminPanelSettingsOutlinedIcon from '@mui/icons-material/AdminPanelSettingsOutlined';
+import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
+import LockOpenOutlinedIcon from '@mui/icons-material/LockOpenOutlined';
+import { DataGrid, GridColDef } from '@mui/x-data-grid';
+import { mockDataTeam } from '../../data/mockData';
 
 const Team = () => {
   // {
@@ -21,26 +21,26 @@ const Team = () => {
   const colors = tokens(theme.palette.mode);
 
   const columns: GridColDef[] = [
-    { field: "id", headerName: "ID" },
+    { field: 'id', headerName: 'ID' },
     {
-      field: "name",
-      headerName: "Name",
+      field: 'name',
+      headerName: 'Name',
       flex: 1,
-      cellClassName: "name-column--cell",
+      cellClassName: 'name-column--cell',
     },
-    { field: "email", headerName: "Email", flex: 1 },
     {
-      field: "age",
-      headerName: "Age",
-      type: "Number",
-      headerAlign: "left",
-      align: "left",
+      field: 'age',
+      headerName: 'Age',
+      type: 'Number',
+      headerAlign: 'left',
+      align: 'left',
     },
-    { field: "phone", headerName: "Phone Number", flex: 1 },
+    { field: 'phone', headerName: 'Phone Number', flex: 1 },
+    { field: 'email', headerName: 'Email', flex: 1 },
     {
-      field: "access",
-      headerName: "Access Level",
-      headerAlign: "center",
+      field: 'access',
+      headerName: 'Access Level',
+      headerAlign: 'center',
       flex: 1,
       renderCell: ({ row: { access } }) => {
         return (
@@ -51,19 +51,13 @@ const Team = () => {
             display="flex"
             justifyContent="center"
             borderRadius="4px"
-            bgcolor={
-              access === "admin"
-                ? colors.greenAccent[600]
-                : colors.greenAccent[700]
-            }
+            bgcolor={access === 'admin' ? colors.greenAccent[600] : colors.greenAccent[700]}
           >
-            {access === "admin" ? (
-              <AdminPanelSettingsOutlinedIcon />
-            ) : undefined}
-            {access === "manager" ? <SecurityOutlinedIcon /> : undefined}
-            {access === "user" ? <LockOpenOutlinedIcon /> : undefined}
+            {access === 'admin' ? <AdminPanelSettingsOutlinedIcon /> : undefined}
+            {access === 'manager' ? <SecurityOutlinedIcon /> : undefined}
+            {access === 'user' ? <LockOpenOutlinedIcon /> : undefined}
 
-            <Typography sx={{ ml: "5px" }} color={colors.grey[100]}>
+            <Typography sx={{ ml: '5px' }} color={colors.grey[100]}>
               {access}
             </Typography>
           </Box>
@@ -79,25 +73,25 @@ const Team = () => {
         height="75vh"
         m="40 0 0 0"
         sx={{
-          "& .MuiDataGrid-root": {
-            border: "none",
+          '& .MuiDataGrid-root': {
+            border: 'none',
           },
-          "& .MuiDataGrid-cell": {
-            borderBottom: "none",
-          },
-          "& .name-column--cell": {
+          // '& .MuiDataGrid-cell': {
+          //   borderBottom: 'none',
+          // },
+          '& .name-column--cell': {
             color: colors.greenAccent[300],
           },
-          "& .MuiDataGrid-columnHeaders": {
+          '& .MuiDataGrid-columnHeaders': {
             backgroundColor: colors.blueAccent[700],
-            borderBottom: "none",
+            borderBottom: 'none',
           },
-          "&. MuiDataGrid-virtualScroller": {
+          '&. MuiDataGrid-virtualScroller': {
             backgroundColor: colors.primary[400],
           },
-          "& .MuiDataGrid-footerContainer": {
+          '& .MuiDataGrid-footerContainer': {
             backgroundColor: colors.blueAccent[700],
-            borderTop: "none",
+            borderTop: 'none',
           },
         }}
       >

@@ -1,11 +1,12 @@
-import React from "react";
-import { ColorModeContext, useMode } from "./theme";
-import { CssBaseline, ThemeProvider } from "@mui/material";
-import { Routes, Route } from "react-router-dom";
-import Topbar from "./pages/global/Topbar";
-import Dashboard from "./pages/dashboard";
-import Team from "./pages/team";
-import Sidebar from "./pages/global/Sidebar";
+import React from 'react';
+import { ColorModeContext, useMode } from './theme';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import { Routes, Route } from 'react-router-dom';
+import Topbar from './pages/global/Topbar';
+import Dashboard from './pages/dashboard';
+import Team from './pages/team';
+import Contacts from './pages/contacts';
+import Sidebar from './pages/global/Sidebar';
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -21,7 +22,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Dashboard />}></Route>
               <Route path="/team" element={<Team />}></Route>
-              {/*<Route path="/" element={<Contacts />}></Route>*/}
+              <Route path="/contacts" element={<Contacts />}></Route>
               {/*<Route path="/" element={<Invoice />}></Route>*/}
               {/*<Route path="/" element={<Form />}></Route>*/}
               {/*<Route path="/" element={<Bar />}></Route>*/}
