@@ -7,6 +7,7 @@ import Dashboard from './pages/dashboard';
 import Team from './pages/team';
 import Contacts from './pages/contacts';
 import Sidebar from './pages/global/Sidebar';
+import Invoices from './pages/invoices';
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -23,7 +24,7 @@ function App() {
               <Route path="/" element={<Dashboard />}></Route>
               <Route path="/team" element={<Team />}></Route>
               <Route path="/contacts" element={<Contacts />}></Route>
-              {/*<Route path="/" element={<Invoice />}></Route>*/}
+              <Route path="/invoices" element={<Invoices />}></Route>
               {/*<Route path="/" element={<Form />}></Route>*/}
               {/*<Route path="/" element={<Bar />}></Route>*/}
               {/*<Route path="/" element={<Pie />}></Route>*/}

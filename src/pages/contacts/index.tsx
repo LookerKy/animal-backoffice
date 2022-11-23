@@ -62,9 +62,9 @@ const Contacts = () => {
           '& .MuiDataGrid-root': {
             border: 'none',
           },
-          '& .MuiDataGrid-cell': {
-            borderBottom: 'none',
-          },
+          // '& .MuiDataGrid-cell': {
+          //   borderBottom: 'none',
+          // },
           '& .name-column--cell': {
             color: colors.greenAccent[300],
           },
